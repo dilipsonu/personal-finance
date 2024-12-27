@@ -14,6 +14,7 @@ public class InternalControllerV1 {
 	
 	@GetMapping("ping")
 	public String ping() {
+		log.info("V1: running the command ping");
 		return "pong - " + new Date();
 	}
 	
