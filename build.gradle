@@ -36,7 +36,11 @@ tasks.named('test') {
 	useJUnitPlatform()
 }
 
+task copyJar(type: Copy) {
+	from bootJar
+	into "deploy"
+}
+
 bootJar {
 	archiveFileName = "personal-finance.jar"
-
 }
